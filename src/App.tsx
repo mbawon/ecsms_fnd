@@ -1,10 +1,15 @@
-import { Button } from "./components/ui/button"
+import { BrowserRouter } from "react-router-dom"
+import Router from "./route"
+import { AuthProvider } from "./common/contexts/AuthContext"
+
 
 const App = () => {
   return (
-    <div>
-      <Button>Click me</Button>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+          <Router />
+      </AuthProvider >
+    </BrowserRouter>
   )
 }
 
